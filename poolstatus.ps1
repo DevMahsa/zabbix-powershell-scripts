@@ -1,5 +1,5 @@
-﻿$s = (Get-WebAppPoolState | Select-object "Value")
-if ($s -Match "started")
+﻿$poolstat= (Get-WebAppPoolState | Select-object "Value")
+if ($poolstat -Match "started")
 {echo 0}
 else
 {echo 1}
